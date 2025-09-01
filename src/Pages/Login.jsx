@@ -53,8 +53,8 @@ const Login = () => {
 					withCredentials: true,
 				}
 			);
-			navigate("/dashboard");
 			toast.success("Login successful!");
+			navigate("/dashboard");
 		} catch (err) {
 			const msg = err.response?.data?.message || "Login failed";
 			setError(msg);
