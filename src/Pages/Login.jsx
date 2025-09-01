@@ -21,7 +21,7 @@ const Login = () => {
 		const checkAuth = async () => {
 			try {
 				const res = await axios.get(
-					"https://url-shortener-api-six.vercel.app/api/isAuthenticated",
+					"https://url-shortener-api-rj6k.onrender.com/api/isAuthenticated",
 					{ withCredentials: true }
 				);
 				if (res.data?.user) {
@@ -47,7 +47,7 @@ const Login = () => {
 
 		try {
 			await axios.post(
-				"https://url-shortener-api-six.vercel.app/api/login",
+				"https://url-shortener-api-rj6k.onrender.com/api/login",
 				formData,
 				{
 					withCredentials: true,
@@ -66,7 +66,7 @@ const Login = () => {
 
 	const handleGoogleLogin = () => {
 		window.location.href =
-			"https://url-shortener-api-six.vercel.app/api/auth/google";
+			"https://url-shortener-api-rj6k.onrender.com/api/auth/google";
 	};
 
 	if (checkingAuth) {

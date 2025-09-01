@@ -18,13 +18,13 @@ const Hero = () => {
 		setError("");
 		try {
 			const { data } = await axios.post(
-				"https://url-shortener-api-six.vercel.app/url/shorten",
+				"https://url-shortener-api-rj6k.onrender.com/url/shorten",
 				{
 					originalUrl: urlInput,
 				}
 			);
 			setShortUrl(
-				`https://url-shortener-api-six.vercel.app/url/${data.shortUrl}`
+				`https://url-shortener-api-rj6k.onrender.com/url/${data.shortUrl}`
 			);
 		} catch (err) {
 			console.log(err);

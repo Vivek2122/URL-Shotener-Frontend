@@ -18,7 +18,7 @@ const Dashboard = () => {
 		const fetchData = async () => {
 			try {
 				const res = await axios.get(
-					"https://url-shortener-api-six.vercel.app/url/dashboard",
+					"https://url-shortener-api-rj6k.onrender.com/url/dashboard",
 					{
 						withCredentials: true,
 					}
@@ -39,7 +39,7 @@ const Dashboard = () => {
 	const handleLogout = async () => {
 		try {
 			await axios.post(
-				"https://url-shortener-api-six.vercel.app/api/logout",
+				"https://url-shortener-api-rj6k.onrender.com/api/logout",
 				{},
 				{ withCredentials: true }
 			);
@@ -56,7 +56,7 @@ const Dashboard = () => {
 		setShortening(true);
 		try {
 			const { data } = await axios.post(
-				"https://url-shortener-api-six.vercel.app/url/shorten/auth",
+				"https://url-shortener-api-rj6k.onrender.com/url/shorten/auth",
 				{ originalUrl: newUrl },
 				{ withCredentials: true }
 			);
