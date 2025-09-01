@@ -17,10 +17,15 @@ const Hero = () => {
 		setIsLoading(true);
 		setError("");
 		try {
-			const { data } = await axios.post("http://localhost:3000/url/shorten", {
-				originalUrl: urlInput,
-			});
-			setShortUrl(`http://localhost:3000/url/${data.shortUrl}`);
+			const { data } = await axios.post(
+				"https://url-shortener-api-six.vercel.app/url/shorten",
+				{
+					originalUrl: urlInput,
+				}
+			);
+			setShortUrl(
+				`https://url-shortener-api-six.vercel.app/url/${data.shortUrl}`
+			);
 		} catch (err) {
 			console.log(err);
 			setError(err.response?.data?.err || "Something went wrong!");

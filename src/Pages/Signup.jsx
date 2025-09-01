@@ -22,7 +22,7 @@ const Signup = () => {
 		const checkAuth = async () => {
 			try {
 				const res = await axios.get(
-					"http://localhost:3000/api/isAuthenticated",
+					"https://url-shortener-api-six.vercel.app/api/isAuthenticated",
 					{ withCredentials: true }
 				);
 				if (res.data?.user) {
@@ -46,9 +46,13 @@ const Signup = () => {
 		setError("");
 
 		try {
-			await axios.post("http://localhost:3000/api/signup", formData, {
-				withCredentials: true,
-			});
+			await axios.post(
+				"https://url-shortener-api-six.vercel.app/api/signup",
+				formData,
+				{
+					withCredentials: true,
+				}
+			);
 			toast.success("Signup successful!");
 			navigate("/login");
 		} catch (err) {
@@ -61,7 +65,8 @@ const Signup = () => {
 	};
 
 	const handleGoogleSignup = () => {
-		window.location.href = "http://localhost:3000/api/auth/google";
+		window.location.href =
+			"https://url-shortener-api-six.vercel.app/api/auth/google";
 	};
 
 	if (checkingAuth) {
