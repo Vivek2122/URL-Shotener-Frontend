@@ -26,6 +26,7 @@ const Dashboard = () => {
 				setUser(res.data.user);
 				setUrls(res.data.urls);
 			} catch (err) {
+				console.log("error in dashboard", err);
 				toast.error("Failed to fetch dashboard data");
 				navigate("/login");
 			} finally {
